@@ -13,7 +13,7 @@ public class LeakConfirmingTest {
 
 	@Test
 	@Leaks(value = false, haltBeforeError = false)
-	public void triggerLeak() throws Exception {
+	public void triggerLeak() {
 		InputStream is = null;
 		try {
 			is = new FileInputStream("./app.truststore");
