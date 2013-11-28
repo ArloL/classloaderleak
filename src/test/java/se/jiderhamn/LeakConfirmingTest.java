@@ -24,7 +24,6 @@ public class LeakConfirmingTest {
 			if (is != null) {
 				is.close();
 			}
-			is = null;
 		}
 	}
 
