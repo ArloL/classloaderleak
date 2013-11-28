@@ -19,7 +19,7 @@ public class LeakConfirmingTest {
 			KeyStore keyStore = KeyStore.getInstance("JKS");
 			keyStore.load(is, "changeit".toCharArray());
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		} finally {
 			if (is != null) {
 				is.close();
