@@ -1,6 +1,7 @@
 package se.jiderhamn;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.security.KeyStore;
 
@@ -22,7 +23,11 @@ public class LeakConfirmingTest {
 			e.printStackTrace();
 		} finally {
 			if (is != null) {
-				is.close();
+				try {
+					is.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
